@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Course-Design</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-header { 
+            background: rgba(255, 255, 255, 0.8); 
+            backdrop-filter: blur(12px); 
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 h-screen overflow-hidden flex flex-col">
+
+    <nav class="w-full z-[100] glass-header border-b border-slate-200/50 shadow-sm shrink-0">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="bg-blue-50 text-blue-600 px-4 py-2 rounded-xl text-sm font-bold hover:bg-blue-100 transition-all border border-blue-100">
+                Halaman Utama
+            </a> 
+            <div class="flex items-center space-x-2">
+                <img src="Photo-profil.png" alt="Logo Archive" class="w-8 h-8 bg-white rounded-lg object-cover">
+                <span class="text-xl font-bold tracking-tighter text-blue-500">POWERPOINT</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex-1 flex flex-col md:flex-row h-[calc(100vh-73px)] overflow-hidden">
+        
+        <div class="w-full md:w-3/4 h-1/2 md:h-full bg-black flex items-center justify-center p-2 md:p-4 shadow-inner relative">
+            <div class="w-full h-full max-w-5xl max-h-[85vh] aspect-video rounded-lg overflow-hidden shadow-2xl bg-zinc-900 flex items-center justify-center">
+                
+                <iframe 
+                    id="ppt-viewer"
+                    src="" 
+                    class="w-full h-full"
+                    frameborder="0" 
+                    marginwidth="0" 
+                    marginheight="0" 
+                    scrolling="no" 
+                    allowfullscreen>
+                </iframe>
+
+                <div id="barcode-container" class="hidden flex-col items-center justify-center bg-white p-8 rounded-2xl shadow-lg max-w-sm w-full text-center mx-4">
+                    <h3 class="text-slate-800 font-bold text-lg mb-2">Pindai Tautan Canva</h3>
+                    <p class="text-slate-500 text-xs mb-4">Scan QR Code di bawah ini untuk langsung menuju template / materi Canva</p>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 inline-block mb-4">
+                        <img id="qr-image" src="" alt="Barcode Canva Link" class="w-48 h-48 mx-auto">
+                    </div>
+                    <span class="text-xs text-blue-600 bg-blue-50 px-3 py-1 rounded-full font-medium break-all">
+                        https://canva.link/4v922j95c6svwd2
+                    </span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="w-full md:w-1/4 h-1/2 md:h-full bg-white border-t md:border-t-0 md:border-l border-gray-200 p-4 flex flex-col justify-between shadow-lg overflow-hidden">
+            
+            <div class="flex flex-col h-[calc(100%-60px)] overflow-hidden">
+                
+                <div class="mb-4 bg-red-700 p-3 rounded-xl border border-red-200 shrink-0">
+                    <label class="block text-xs font-bold text-white uppercase tracking-wider mb-1.5 flex items-center gap-1">
+                        <i data-lucide="search" class="w-3.5 h-3.5 text-white"></i> Cari Inspirasi Visual
+                    </label>
+                    <div class="flex gap-2">
+                        <input 
+                            id="pinterest-search-input"
+                            type="text" 
+                            placeholder="Cari Inspirasi di Pinterest" 
+                            class="flex-1 px-3 py-1.5 text-sm bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all placeholder:text-gray-400"
+                        />
+                        <button 
+                            onclick="searchPinterest()"
+                            class="px-3 py-1.5 bg-white hover:bg-red-100 text-red-700 rounded-lg text-xs font-bold transition-colors flex items-center justify-center shrink-0"
+                        >
+                            Cari
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mb-4 bg-blue-600 p-3 rounded-xl border border-blue-200 shrink-0">
+                    <label class="block text-xs font-bold text-white uppercase tracking-wider mb-1.5 flex items-center gap-1">
+                        <i data-lucide="search" class="w-3.5 h-3.5 text-white"></i> Cari Materi Belajar
+                    </label>
+                    <div class="flex gap-2">
+                        <input 
+                            id="ruangguru-search-input"
+                            type="text" 
+                            placeholder="Cari materi, bab, atau soal di Ruangguru..." 
+                            class="flex-1 px-3 py-1.5 text-sm bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all placeholder:text-gray-400"
+                        />
+                        <button 
+                            onclick="searchRuangguru()"
+                            class="px-3 py-1.5 bg-white hover:bg-blue-50 text-blue-600 rounded-lg text-xs font-bold transition-colors flex items-center justify-center shrink-0"
+                        >
+                            Cari
+                        </button>
+                    </div>
+                </div>
+
+                <span class="px-3 py-1 bg-blue-50 text-blue-600 text-xs font-semibold rounded-full uppercase tracking-wider self-start mb-2 shrink-0">
+                    Daftar Materi PPT
+                </span>
+                
+                <div id="ppt-list-container" class="space-y-2 overflow-y-auto pr-1 flex-1 mt-1 pb-4">
+                    </div>
+            </div>
+
+            <div class="pt-3 border-t border-gray-100 shrink-0">
+                <a id="external-link-btn"
+                   href="#" 
+                   target="_blank" 
+                   class="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-blue-600 text-white rounded-xl text-sm font-bold hover:bg-blue-700 active:scale-[0.98] transition-all shadow-md shadow-blue-200">
+                    <span>Buka Source Asli</span>
+                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // DATA MASTER JANGKEP (Ditambahkan No 7 dengan tipe khusus barcode)
+        const pptList = [
+            {
+                id: 1,
+                title: "01. Prinsip Dasar & Unsur Desain",
+                type: "iframe",
+                embedUrl: "https://www.slideshare.net/slideshow/embed_code/key/cvdDWoAkJD3pmt",
+                sourceUrl: "https://www.slideshare.net/slideshow/2021-prinsip-dasar-dan-unsur-desainpptx/254452211"
+            },
+            {
+                id: 2,
+                title: "02. Teori Warna",
+                type: "iframe",
+                embedUrl: "https://www.slideshare.net/slideshow/embed_code/key/D2PTEOmf54M0jj",
+                sourceUrl: "https://www.slideshare.net/slideshow/teori-warna-pada-beragam-jenis-dan-warna/267972147"
+            },
+            {
+                id: 3,
+                title: "03. Dasar-Dasar Tipografi",
+                type: "iframe",
+                embedUrl: "https://www.slideshare.net/slideshow/embed_code/key/FvVQ31d94VYUhe",
+                sourceUrl: "https://www.slideshare.net/slideshow/typografi-08e0/261816641"
+            },
+            {
+                id: 4,
+                title: "04. Layouting & Tata Letak",
+                type: "iframe",
+                embedUrl: "https://www.slideshare.net/slideshow/embed_code/key/wf3c0Ai3MCrrmY",
+                sourceUrl: "https://www.slideshare.net/slideshow/6-layoutpptx/259721163"
+            },
+            {
+                id: 5,
+                title: "05. Pelatihan Desain Canva",
+                type: "iframe",
+                embedUrl: "https://www.slideshare.net/slideshow/embed_code/key/5AG8GINlLSZud6",
+                sourceUrl: "https://www.slideshare.net/slideshow/ppt-pelatihan-canvaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/269364848"
+            },
+            {
+                id: 6,
+                title: "06. Desain Canva Pemula",
+                type: "iframe",
+                embedUrl: "https://www.slideshare.net/slideshow/embed_code/key/MlRFwuLGyK6YeQ",
+                sourceUrl: "https://www.slideshare.net/slideshow/desain-dengan-canva-pemula/252019698"
+            },
+            {
+                id: 7,
+                title: "07. Tautan Template Canva",
+                type: "barcode",
+                embedUrl: "https://canva.link/4v922j95c6svwd2", // Link target
+                sourceUrl: "https://canva.link/4v922j95c6svwd2"
+            }
+        ];
+
+        const iframeViewer = document.getElementById('ppt-viewer');
+        const barcodeContainer = document.getElementById('barcode-container');
+        const qrImage = document.getElementById('qr-image');
+        const listContainer = document.getElementById('ppt-list-container');
+        const externalBtn = document.getElementById('external-link-btn');
+        const pinterestInput = document.getElementById('pinterest-search-input');
+
+        // Fungsi Pinterest Search
+        function searchPinterest() {
+            const query = pinterestInput.value.trim();
+            if (query !== "") {
+                const searchUrl = `https://id.pinterest.com/search/pins/?q=${encodeURIComponent(query)}`;
+                window.open(searchUrl, '_blank');
+            } else {
+                alert("Monggo ketik rumiyin kata kunci pencarianipun, Sam!");
+            }
+        }
+
+        pinterestInput.addEventListener("keyup", function(event) {
+            if (event.key === "Enter") searchPinterest();
+        });
+
+        // Fungsi Ganti Konten (PPT atau Barcode)
+        function switchPPT(id) {
+            const selected = pptList.find(item => item.id === id);
+            if (selected) {
+                
+                // Cek tipe konten
+                if (selected.type === "barcode") {
+                    // Sembunyikan iframe, tampilkan box QR Code
+                    iframeViewer.classList.add('hidden');
+                    barcodeContainer.classList.remove('hidden');
+                    barcodeContainer.classList.add('flex');
+                    
+                    // Generate gambar QR Code secara dinamis
+                    qrImage.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(selected.embedUrl)}`;
+                } else {
+                    // Sembunyikan box QR Code, tampilkan iframe PPT
+                    barcodeContainer.classList.add('hidden');
+                    barcodeContainer.classList.remove('flex');
+                    iframeViewer.classList.remove('hidden');
+                    
+                    iframeViewer.src = selected.embedUrl;
+                }
+
+                externalBtn.href = selected.sourceUrl;
+
+                // Update styling tombol aktif
+                pptList.forEach(item => {
+                    const btn = document.getElementById(`btn-ppt-${item.id}`);
+                    if (btn) {
+                        if (item.id === id) {
+                            btn.className = "w-full text-left px-4 py-2.5 bg-blue-50 border-l-4 border-blue-600 text-blue-700 font-semibold rounded-r-lg transition-all text-xs md:text-sm shadow-sm";
+                        } else {
+                            btn.className = "w-full text-left px-4 py-2.5 bg-gray-50 border-l-4 border-transparent text-gray-600 hover:bg-gray-100 hover:text-gray-800 font-medium rounded-lg transition-all text-xs md:text-sm";
+                        }
+                    }
+                });
+            }
+        }
+
+        // Render List Menu
+        function renderMenuList() {
+            listContainer.innerHTML = '';
+            pptList.forEach((ppt) => {
+                const button = document.createElement('button');
+                button.id = `btn-ppt-${ppt.id}`;
+                button.innerText = ppt.title;
+                button.onclick = () => switchPPT(ppt.id);
+                listContainer.appendChild(button);
+            });
+            if(pptList.length > 0) switchPPT(pptList[0].id);
+        }
+
+        // Jalankan inisialisasi awal
+        renderMenuList();
+        lucide.createIcons();
+
+        function searchRuangguru() {
+    const searchInput = document.getElementById('ruangguru-search-input');
+    const query = searchInput.value.trim();
+    
+    if (query !== "") {
+        // Menggunakan encodeURIComponent agar karakter khusus/spasi aman di URL
+        const formattedQuery = encodeURIComponent(query);
+        
+        // Diarahkan langsung ke mesin pencari Blog Ruangguru yang aktif
+        window.open(`https://www.ruangguru.com/blog?s=${formattedQuery}`, '_blank');
+    } else {
+        alert("Silakan masukkan materi atau kata kunci yang ingin dicari!");
+    }
+}
+
+// Menjalankan pencarian saat menekan tombol 'Enter'
+document.getElementById('ruangguru-search-input').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        searchRuangguru();
+    }
+});
+    </script>
+</body>
+</html>
