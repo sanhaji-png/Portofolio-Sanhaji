@@ -33,6 +33,7 @@
                 <a href="#video" class="text-slate-300 hover:text-cyan-400 transition">Video</a>
                 <a href="#seminar" class="text-slate-300 hover:text-cyan-400 transition">Seminar</a>
                 <a href="#template" class="text-slate-300 hover:text-cyan-400 transition">E-course</a>
+                <a href="blog.html" class="text-slate-300 hover:text-cyan-400 transition">Blog</a>
             </div>
             <a href="#kontak" class="bg-cyan-500 text-slate-950 px-4 py-2 rounded-full text-xs md:text-sm font-bold hover:bg-cyan-400 transition shadow-lg shadow-cyan-500/20">Contact me</a>
         </div>
@@ -44,56 +45,74 @@
         <div class="max-w-6xl mx-auto grid md:grid-cols-12 gap-8 md:gap-12 items-center relative z-10">
             
             <!-- Kolom Teks (7 Kolom) -->
-            <div class="md:col-span-7">
-                <div class="inline-flex items-center gap-2 px-3 py-1 bg-cyan-500/10 rounded-full border border-cyan-500/20 mb-4">
-                    <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-                    <span class="text-cyan-400 font-bold tracking-widest text-[10px] md:text-xs uppercase">Available for Freelance & Projects</span>
-                </div>
-                
-                <h2 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
-                    Hi, I’m <span class="text-cyan-400 neon-glow">San.</span> <br>Creative Designer & Educator
-                </h2>
-                
-                <p class="mt-4 md:mt-6 text-slate-400 leading-relaxed text-xs md:text-base">
-                    Great design goes beyond aesthetics—it must be functional and driven by purpose. Specializing in Brand Identity & Digital Content, I help creators and businesses build a standout presence.
-                </p>
+<div class="md:col-span-7 relative px-2 py-4 md:p-12 md:rounded-3xl md:bg-slate-900/60 md:border md:border-slate-800/80 md:backdrop-blur-xl md:shadow-2xl overflow-hidden">
+    <!-- Gradient Glow / Blur Effect (Hanya muncul di Desktop agar tidak sesak di HP) -->
+    <div class="hidden md:block absolute -top-24 -left-24 w-72 h-72 bg-cyan-500/15 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="hidden md:block absolute -bottom-24 -right-24 w-72 h-72 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <!-- Konten Teks -->
+    <div class="relative z-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-cyan-500/10 rounded-full border border-cyan-500/20 mb-4">
+            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+            <span class="text-cyan-400 font-bold tracking-widest text-[10px] md:text-xs uppercase">Available for Freelance & Projects</span>
+        </div>
+        
+        <h2 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight text-white">
+            Hi, I’m <span class="text-cyan-400 neon-glow">San.</span> <br>Creative Designer & Educator
+        </h2>
+        
+        <p class="mt-4 md:mt-6 text-slate-300 leading-relaxed text-xs md:text-base">
+            Great design goes beyond aesthetics—it must be functional and driven by purpose. Specializing in Brand Identity & Digital Content, I help creators and businesses build a standout presence.
+        </p>
+    </div>
+</div>
+
+<!-- Kolom Foto dengan Skill Chips Overlapping & Ikon Editing di 1/3 Bagian Bawah -->
+<div class="md:col-span-5 flex justify-center relative my-12 md:my-0 md:pl-6">
+    <div class="relative w-full max-w-[240px] md:max-w-[280px]">
+        <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-[2rem] blur-md opacity-25"></div>
+        
+        <!-- Frame Foto Utama -->
+        <div class="relative w-full h-[320px] md:h-[380px] bg-slate-900 rounded-[1rem] overflow-hidden border border-cyan-500/30 shadow-xl">
+            <img src="Foto-person.jpg" alt="Profil Muhammad Sanhaji" class="w-full h-full object-cover object-top hover:scale-105 transition duration-500">
+        </div>
+
+        <!-- Skill Chips Kiri Atas (Dengan animasi melayang halus) -->
+        <div class="absolute -top-5 -left-12 md:-left-12 z-20 flex flex-col gap-1 bg-slate-900/95 backdrop-blur-xl border border-cyan-500/30 p-2 rounded-xl shadow-2xl animate-pulse">
+            <div class="px-2.5 py-1 rounded-lg bg-slate-950/80 border border-slate-800 text-slate-300 text-[10px] font-medium flex items-center gap-1.5">
+                <i data-lucide="pen-tool" class="w-3 h-3 text-cyan-400"></i> Brand Identity
             </div>
-
-<!-- Kolom Foto dengan Skill Chips Overlapping di Kiri Atas -->
-            <div class="md:col-span-5 flex justify-center relative my-8 md:my-0 md:pl-6">
-                <div class="relative w-full max-w-[240px] md:max-w-[280px]">
-                    <!-- Efek Glow di Belakang Foto -->
-                    <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-[2rem] blur-md opacity-25"></div>
-                    
-                    <!-- Frame Foto Utama -->
-                    <div class="relative w-full h-[320px] md:h-[380px] bg-slate-900 rounded-[1rem] overflow-hidden border border-cyan-500/30 shadow-xl">
-                        <img src="Foto-person.jpg" alt="Profil Muhammad Sanhaji" class="w-full h-full object-cover object-top hover:scale-105 transition duration-500">
-                    </div>
-
-                    <!-- Skill Chips: Mengambang di Kiri Atas (1/3 Masuk Menimpa Sudut Kiri Atas Foto) -->
-                    <div class="absolute -top-5 -left-10 md:-left-10 z-20 flex flex-col gap-1 bg-slate-900/95 backdrop-blur-xl border border-cyan-500/30 p-2 rounded-xl shadow-2xl">
-                        <div class="px-2.5 py-1 rounded-lg bg-slate-950/80 border border-slate-800 text-slate-300 text-[10px] font-medium flex items-center gap-1.5">
-                            <i data-lucide="pen-tool" class="w-3 h-3 text-cyan-400"></i> Brand Identity
-                        </div>
-                        <div class="px-2.5 py-1 rounded-lg bg-slate-950/80 border border-slate-800 text-slate-300 text-[10px] font-medium flex items-center gap-1.5">
-                            <i data-lucide="video" class="w-3 h-3 text-cyan-400"></i> Motion Content
-                        </div>
-                    </div>
-
-                    <!-- Tombol Aksi di Bawah Kanan Agak Keluar -->
-                    <div class="absolute -bottom-8 -right-9 md:-right-8 z-20 flex flex-col gap-1.5 w-[170px] md:w-[190px] bg-slate-900/95 backdrop-blur-xl border border-cyan-500/30 p-2.5 rounded-2xl shadow-2xl">
-                        <a href="see_more.html" class="w-full bg-cyan-500 text-slate-950 px-3 py-1.5 rounded-xl text-[11px] font-bold hover:bg-cyan-400 transition neon-box-glow flex items-center justify-center gap-1.5">
-                            <span>View Projects</span>
-                            <i data-lucide="arrow-right" class="w-3 h-3"></i>
-                        </a>
-                        <div class="w-full flex items-center justify-center space-x-1.5 px-2.5 py-1 rounded-xl bg-slate-950/80 border border-slate-800">
-                            <i data-lucide="award" class="text-cyan-400 w-3 h-3"></i>
-                            <span class="text-[10px] font-semibold text-slate-300">5+ Years Experience</span>
-                        </div>
-                    </div>
-
-                </div>
+            <div class="px-2.5 py-1 rounded-lg bg-slate-950/80 border border-slate-800 text-slate-300 text-[10px] font-medium flex items-center gap-1.5">
+                <i data-lucide="video" class="w-3 h-3 text-cyan-400"></i> Motion Content
             </div>
+        </div>
+
+        <!-- Badge Design Kanan Atas (Digeser keluar agar tidak menutup foto & diberi animasi) -->
+        <div class="absolute top-[20%] -right-10 md:-right-12 z-30 pointer-events-none flex items-center gap-1.5 bg-slate-900/90 backdrop-blur-md border border-cyan-500/30 px-3 py-1.5 rounded-xl shadow-lg transition-transform duration-500 hover:scale-110">
+            <i data-lucide="palette" class="w-4 h-4 text-cyan-400 animate-spin" style="animation-duration: 8s;"></i>
+            <span class="text-[9px] font-bold text-cyan-300 tracking-wider uppercase">Design</span>
+        </div>
+
+        <!-- Badge Creative Kiri Bawah (Digeser keluar agar tidak menutup foto & diberi animasi) -->
+        <div class="absolute bottom-[25%] -left-10 md:-left-12 z-30 pointer-events-none flex items-center gap-1.5 bg-slate-900/90 backdrop-blur-md border border-cyan-500/30 px-3 py-1.5 rounded-xl shadow-lg transition-transform duration-500 hover:scale-110">
+            <i data-lucide="layers" class="w-4 h-4 text-cyan-400 animate-bounce"></i>
+            <span class="text-[9px] font-bold text-cyan-300 tracking-wider uppercase">Creative</span>
+        </div>
+
+        <!-- Tombol Aksi di Bawah Kanan Agak Keluar -->
+        <div class="absolute -bottom-8 -right-9 md:-right-8 z-20 flex flex-col gap-1.5 w-[170px] md:w-[190px] bg-slate-900/95 backdrop-blur-xl border border-cyan-500/30 p-2.5 rounded-2xl shadow-2xl">
+            <a href="see_more.html" class="w-full bg-cyan-500 text-slate-950 px-3 py-1.5 rounded-xl text-[11px] font-bold hover:bg-cyan-400 transition neon-box-glow flex items-center justify-center gap-1.5">
+                <span>View Projects</span>
+                <i data-lucide="arrow-right" class="w-3 h-3"></i>
+            </a>
+            <div class="w-full flex items-center justify-center space-x-1.5 px-2.5 py-1 rounded-xl bg-slate-950/80 border border-slate-800">
+                <i data-lucide="award" class="text-cyan-400 w-3 h-3"></i>
+                <span class="text-[10px] font-semibold text-slate-300">5+ Years Experience</span>
+            </div>
+        </div>
+
+    </div>
+</div>
         </div>
     </section>
 
@@ -169,45 +188,47 @@
     </section>
 
     <!-- Video Section -->
-<!-- Video Section -->
-    <section id="video" class="py-16 md:py-24 bg-slate-950 px-6">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center max-w-2xl mx-auto mb-10 md:mb-16">
-                <span class="text-cyan-400 font-semibold tracking-widest text-[10px] md:text-xs uppercase">Motion & Visuals</span>
-                <h3 class="text-2xl md:text-4xl font-extrabold text-white mt-1">Videography & Motion Content</h3>
-                <p class="text-slate-400 mt-2 text-xs md:text-sm">Handling the entire creative process from behind the camera to the final cut.</p>
+<section id="video" class="py-16 md:py-24 bg-slate-950 px-6">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-10 md:mb-16">
+            <span class="text-cyan-400 font-semibold tracking-widest text-[10px] md:text-xs uppercase">Motion & Visuals</span>
+            <h3 class="text-2xl md:text-4xl font-extrabold text-white mt-1">Videography & Motion Content</h3>
+            <p class="text-slate-400 mt-2 text-xs md:text-sm">Handling the entire creative process from behind the camera to the final cut.</p>
+        </div>
+        
+        <!-- Slider Container: Tetap flex dan overflow-x-auto di HP maupun Desktop -->
+        <div class="flex overflow-x-auto gap-5 md:gap-8 pb-4 scrollbar-hide snap-x snap-mandatory">
+
+            <!-- Video Item 1 -->
+            <div class="rounded-2xl md:rounded-3xl overflow-hidden aspect-video bg-slate-900 border border-slate-800 shadow-2xl relative min-w-[280px] sm:min-w-[360px] md:min-w-[420px] snap-start shrink-0">
+                <iframe src="https://drive.google.com/file/d/1LP_9gLFfHS37Gze5YpLNtWWRTBpoiHqe/preview" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[105%] h-[105%] border-0 object-cover pointer-events-auto" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+
+            <!-- Video Item 2 -->
+            <div class="rounded-2xl md:rounded-3xl overflow-hidden aspect-video bg-slate-900 border border-slate-800 shadow-2xl relative min-w-[280px] sm:min-w-[360px] md:min-w-[420px] snap-start shrink-0">
+                <iframe src="https://drive.google.com/file/d/1p09LtJ0ZrwHExYybmumf1Qpj3bipakvS/preview" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[105%] h-[105%] border-0 object-cover pointer-events-auto" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
             
-            <!-- Slider Container untuk HP & Grid rapi untuk Desktop -->
-            <div class="flex md:grid md:grid-cols-3 overflow-x-auto gap-5 md:gap-8 pb-4 md:pb-0 scrollbar-hide snap-x snap-mandatory">
- 
-                <div class="rounded-2xl md:rounded-3xl overflow-hidden aspect-video bg-slate-900 border border-slate-800 shadow-2xl relative min-w-[280px] md:min-w-full snap-start flex-1">
-                    <iframe src="https://drive.google.com/file/d/1LP_9gLFfHS37Gze5YpLNtWWRTBpoiHqe/preview" class="absolute top-0 left-0 w-full h-full border-0 object-cover" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                </div>
-                <!-- Video Item 1 -->
-                <div class="rounded-2xl md:rounded-3xl overflow-hidden aspect-video bg-slate-900 border border-slate-800 shadow-2xl relative min-w-[280px] md:min-w-full snap-start flex-1">
-                    <iframe src="https://drive.google.com/file/d/1p09LtJ0ZrwHExYybmumf1Qpj3bipakvS/preview" class="absolute top-0 left-0 w-full h-full border-0 object-cover" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                </div>
-                
-                <!-- Video Item 2 -->
-                <div class="rounded-2xl md:rounded-3xl overflow-hidden aspect-video bg-slate-900 border border-slate-800 shadow-2xl relative min-w-[280px] md:min-w-full snap-start flex-1">
-                    <iframe src="https://drive.google.com/file/d/1Sg_DgPSqtuUZ_zMoaAf_my4YPVjk8wRI/preview" class="absolute top-0 left-0 w-full h-full border-0 object-cover" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                </div>
-
-                <!-- Video Item 3 -->
-                <div class="rounded-2xl md:rounded-3xl overflow-hidden aspect-video bg-slate-900 border border-slate-800 shadow-2xl relative min-w-[280px] md:min-w-full snap-start flex-1">
-                    <iframe src="https://drive.google.com/file/d/1Qva39MtZfaVRk5GvBxCbpRAI0_f-kk4D/preview" class="absolute top-0 left-0 w-full h-full border-0 object-cover" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                </div>
-
-                <div class="rounded-2xl md:rounded-3xl overflow-hidden aspect-video bg-slate-900 border border-slate-800 shadow-2xl relative min-w-[280px] md:min-w-full snap-start flex-1">
-                    <iframe src="https://drive.google.com/file/d/1rHGM4txGfy6fBxHkgqbGbgWEQbw8UV10/preview" class="absolute top-0 left-0 w-full h-full border-0 object-cover" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                </div>
-
+            <!-- Video Item 3 -->
+            <div class="rounded-2xl md:rounded-3xl overflow-hidden aspect-video bg-slate-900 border border-slate-800 shadow-2xl relative min-w-[280px] sm:min-w-[360px] md:min-w-[420px] snap-start shrink-0">
+                <iframe src="https://drive.google.com/file/d/1Sg_DgPSqtuUZ_zMoaAf_my4YPVjk8wRI/preview" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[105%] h-[105%] border-0 object-cover pointer-events-auto" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
-        </div>
-    </section>
 
-    <!-- Seminar Section (Diubah jadi Horizontal Slider di Mobile agar tidak numpuk) -->
+            <!-- Video Item 4 -->
+            <div class="rounded-2xl md:rounded-3xl overflow-hidden aspect-video bg-slate-900 border border-slate-800 shadow-2xl relative min-w-[280px] sm:min-w-[360px] md:min-w-[420px] snap-start shrink-0">
+                <iframe src="https://drive.google.com/file/d/1Qva39MtZfaVRk5GvBxCbpRAI0_f-kk4D/preview" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[105%] h-[105%] border-0 object-cover pointer-events-auto" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+
+            <!-- Video Item 5 -->
+            <div class="rounded-2xl md:rounded-3xl overflow-hidden aspect-video bg-slate-900 border border-slate-800 shadow-2xl relative min-w-[280px] sm:min-w-[360px] md:min-w-[420px] snap-start shrink-0">
+                <iframe src="https://drive.google.com/file/d/1rHGM4txGfy6fBxHkgqbGbgWEQbw8UV10/preview" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[105%] h-[105%] border-0 object-cover pointer-events-auto" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- Seminar Section -->
     <section id="seminar" class="py-16 md:py-24 px-6 bg-slate-900/40 border-y border-slate-900">
         <div class="max-w-6xl mx-auto">
             <div class="text-center max-w-2xl mx-auto mb-10 md:mb-16">
@@ -273,7 +294,7 @@
                     </div>
                 </div>
                 
-                <div class="flex flex-col md:flex-row gap-5 md:gap-8 bg-slate-900/80 border border-slate-800 p-5 md:p-8 rounded-3xl items-center shadow-lg hover:border-cyan-500/40 transition min-w-[270px] md:min-w-full snap-start flex-1">
+                <div class="flex flex-col md:flex-row-reverse gap-5 md:gap-8 bg-slate-900/80 border border-slate-800 p-5 md:p-8 rounded-3xl items-center shadow-lg hover:border-cyan-500/40 transition min-w-[270px] md:min-w-full snap-start flex-1">
                     <div class="w-full md:w-72 h-40 md:h-48 shrink-0 rounded-2xl overflow-hidden border border-slate-700">
                         <img src="Speaking/speaking4.jpg" alt="Foto Seminar" class="w-full h-full object-cover hover:scale-105 transition duration-500">
                     </div>
@@ -301,28 +322,28 @@
             <p class="text-slate-400 mt-2 text-xs md:text-sm max-w-2xl mx-auto">Boost your design skills using tools and resources I've created.</p>
         </div>
         
-<div class="max-w-md md:max-w-5xl mx-auto flex md:grid md:grid-cols-2 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden gap-4 md:gap-8 pb-4 md:pb-0 px-4 md:px-0">
+<div class="max-w-md md:max-w-6xl mx-auto flex md:grid md:grid-cols-3 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden gap-4 md:gap-8 pb-4 md:pb-0 px-4 md:px-0">
     
     <!-- Kolom 1: Free CV Template -->
-    <div class="bg-slate-900 border border-slate-800 p-5 md:p-8 rounded-3xl flex flex-col md:flex-row gap-5 items-center hover:border-cyan-500/40 transition duration-300 min-w-[85%] sm:min-w-[320px] md:min-w-0 snap-start shrink-0">
+    <div class="bg-slate-900 border border-slate-800 p-5 md:p-6 rounded-3xl flex flex-col md:flex-col gap-5 items-center hover:border-cyan-500/40 transition duration-300 min-w-[85%] sm:min-w-[320px] md:min-w-0 snap-start shrink-0">
         <div class="w-16 h-16 md:w-20 md:h-20 bg-slate-800 rounded-2xl flex items-center justify-center text-white shrink-0 overflow-hidden border border-slate-700">
             <img src="Cover/Cover (3).jpg" alt="CV Template" class="w-full h-full object-cover">
         </div>
-        <div class="text-center md:text-left flex-1 flex flex-col justify-between h-full w-full">
+        <div class="text-center flex-1 flex flex-col justify-between h-full w-full">
             <div>
                 <h4 class="text-base md:text-lg font-bold text-white">Professional CV Template</h4>
                 <p class="text-slate-400 text-xs mt-1 leading-relaxed">A clean, ATS-friendly template designed via Canva.</p>
             </div>
-            <a href="https://www.canva.com/design/DAGOptlSBCk/PO8lsdEbkDuFgDZjWDIGOA/view?utm_content=DAGOptlSBCk&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" class="mt-4 w-full md:w-auto inline-block text-center px-5 py-2.5 bg-cyan-500 text-slate-950 rounded-xl text-xs font-bold hover:bg-cyan-400 transition shadow-lg shadow-cyan-500/10">Download Free</a>
+            <a href="https://www.canva.com/design/DAGOptlSBCk/PO8lsdEbkDuFgDZjWDIGOA/view?utm_content=DAGOptlSBCk&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank" class="mt-4 w-full inline-block text-center px-5 py-2.5 bg-cyan-500 text-slate-950 rounded-xl text-xs font-bold hover:bg-cyan-400 transition shadow-lg shadow-cyan-500/10">Download Free</a>
         </div>
     </div>
 
     <!-- Kolom 2: Kids Coloring Pack -->
-    <div class="bg-slate-900 border border-slate-800 p-5 md:p-8 rounded-3xl flex flex-col md:flex-row gap-5 items-center hover:border-cyan-500/40 transition duration-300 min-w-[85%] sm:min-w-[320px] md:min-w-0 snap-start shrink-0">
+    <div class="bg-slate-900 border border-slate-800 p-5 md:p-6 rounded-3xl flex flex-col md:flex-col gap-5 items-center hover:border-cyan-500/40 transition duration-300 min-w-[85%] sm:min-w-[320px] md:min-w-0 snap-start shrink-0">
         <div class="w-16 h-16 md:w-20 md:h-20 bg-slate-800 rounded-2xl flex items-center justify-center text-white shrink-0 overflow-hidden border border-slate-700">
             <img src="Cover/Cover (1).png" alt="Coloring Pack" class="w-full h-full object-cover">
         </div>
-        <div class="text-center md:text-left flex-1 flex flex-col justify-between h-full w-full">
+        <div class="text-center flex-1 flex flex-col justify-between h-full w-full">
             <div>
                 <h4 class="text-base md:text-lg font-bold text-white">Kids Coloring Pack</h4>
                 <p class="text-slate-400 text-xs mt-1 leading-relaxed">Fun coloring sheets for child development.</p>
@@ -336,18 +357,18 @@
                     </div>
                     <button onclick="validateProductToken('kidsTokenInput', 'kidsError', 'kidsSuccess', '759957', 'https://familystore.myscalev.com/utama-aci-lisensi-plr')" class="px-4 py-2 bg-cyan-500 text-slate-950 rounded-xl text-xs font-bold hover:bg-cyan-400 transition">Unlock</button>
                 </div>
-                <p id="kidsError" class="text-red-400 text-[10px] mt-1 hidden font-semibold text-center md:text-left">Incorrect token!</p>
-                <p id="kidsSuccess" class="text-cyan-400 text-[10px] mt-1 hidden font-semibold text-center md:text-left">Verified! Redirecting...</p>
+                <p id="kidsError" class="text-red-400 text-[10px] mt-1 hidden font-semibold text-center">Incorrect token!</p>
+                <p id="kidsSuccess" class="text-cyan-400 text-[10px] mt-1 hidden font-semibold text-center">Verified! Redirecting...</p>
             </div>
         </div>
     </div>
 
     <!-- Kolom 3: Book & Self Dev -->
-    <div class="bg-slate-900 border border-slate-800 p-5 md:p-8 rounded-3xl flex flex-col md:flex-row gap-5 items-center hover:border-cyan-500/40 transition duration-300 min-w-[85%] sm:min-w-[320px] md:min-w-0 snap-start shrink-0">
+    <div class="bg-slate-900 border border-slate-800 p-5 md:p-6 rounded-3xl flex flex-col md:flex-col gap-5 items-center hover:border-cyan-500/40 transition duration-300 min-w-[85%] sm:min-w-[320px] md:min-w-0 snap-start shrink-0">
         <div class="w-16 h-16 md:w-20 md:h-20 bg-slate-800 rounded-2xl flex items-center justify-center text-white shrink-0 overflow-hidden border border-slate-700">
             <img src="Cover/Cover (2).jpg" alt="Course Preview" class="w-full h-full object-cover">
         </div>
-        <div class="text-center md:text-left flex-1 flex flex-col justify-between h-full w-full">
+        <div class="text-center flex-1 flex flex-col justify-between h-full w-full">
             <div>
                 <h4 class="text-base md:text-lg font-bold text-white">Design & Self-Development Book</h4>
                 <p class="text-slate-400 text-xs mt-1 leading-relaxed">A comprehensive guide blending design with personal growth.</p>
@@ -361,8 +382,8 @@
                     </div>
                     <button onclick="validateProductToken('courseTokenInput', 'courseError', 'courseSuccess', '654321', 'https://drive.google.com/drive/folders/1IVZzpQgUCOckPYNR1YG7TAmmhvxmAOTC?usp=sharing')" class="px-4 py-2 bg-cyan-500 text-slate-950 rounded-xl text-xs font-bold hover:bg-cyan-400 transition">Unlock</button>
                 </div>
-                <p id="courseError" class="text-red-400 text-[10px] mt-1 hidden font-semibold text-center md:text-left">Incorrect token!</p>
-                <p id="courseSuccess" class="text-cyan-400 text-[10px] mt-1 hidden font-semibold text-center md:text-left">Verified! Redirecting...</p>
+                <p id="courseError" class="text-red-400 text-[10px] mt-1 hidden font-semibold text-center">Incorrect token!</p>
+                <p id="courseSuccess" class="text-cyan-400 text-[10px] mt-1 hidden font-semibold text-center">Verified! Redirecting...</p>
             </div>
         </div>
     </div>
@@ -455,9 +476,9 @@
                         Helping businesses build a strong visual identity through graphic design and creative education since 2021.
                     </p>
                     <div class="flex space-x-3">
-                        <a href="https://www.facebook.com/share/1EXyHubKTA/" class="w-9 h-9 bg-blue-600 border border-slate-800 rounded-full flex items-center justify-center hover:border-cyan-400 hover:text-cyan-400 transition"><img src="Icon/Icon (1).png" class="w-4 h-4 object-contain"></a>      
+                        <a href="https://www.facebook.com/share/1EXyHubKTA/" class="w-9 h-9 bg-blue-600 border border-slate-800 rounded-full flex items-center justify-center hover:border-cyan-400 hover:text-cyan-400 transition"><img src="Icon/Icon (1).png" class="w-4 h-4 object-contain"></a>     
                         <a href="https://www.instagram.com/saann_471?igsh=MWxvcXR1cmExajk4cA==" class="w-9 h-9 bg-blue-600 border border-slate-800 rounded-full flex items-center justify-center hover:border-cyan-400 hover:text-cyan-400 transition"><img src="Icon/Icon (2).png" class="w-4 h-4 object-contain"></a>   
-                        <a href="https://www.tiktok.com/@sannxx47?_r=1&_t=ZS-96m0yATUSjV" class="w-9 h-9 bg-blue-600 border border-slate-800 rounded-full flex items-center justify-center hover:border-cyan-400 hover:text-cyan-400 transition"><img src="Icon/Icon (3).png" class="w-4 h-4 object-contain"></a>         
+                        <a href="https://www.tiktok.com/@sannxx47?_r=1&_t=ZS-96m0yATUSjV" class="w-9 h-9 bg-blue-600 border border-slate-800 rounded-full flex items-center justify-center hover:border-cyan-400 hover:text-cyan-400 transition"><img src="Icon/Icon (3).png" class="w-4 h-4 object-contain"></a>        
                     </div>
                 </div>
             </div>
@@ -466,6 +487,7 @@
             <div class="pt-6 flex flex-col md:flex-row justify-between items-center text-slate-500 text-xs gap-4">
                 <p>&copy; Designed & Crafted with ❤️<span class="text-white font-medium"> By San </span>2026.</p>
                 <div class="flex space-x-6">
+                    <a href="blog.html" class="hover:text-cyan-400 transition">Blog</a>
                     <a href="privacy.html" class="hover:text-cyan-400 transition">Privacy Policy</a>
                     <a href="tos.html" class="hover:text-cyan-400 transition">Terms of Service</a>
                     <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="flex items-center gap-1 hover:text-cyan-400 transition font-bold uppercase tracking-widest">

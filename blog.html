@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & Article - Muhammad Sanhaji</title>
+    <link rel="icon" type="image/png" href="gambar/gambar7.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-nav { background: rgba(10, 15, 30, 0.85); backdrop-filter: blur(12px); }
+        .glass-card { background: rgba(30, 41, 59, 0.5); backdrop-filter: blur(10px); border: 1px solid rgba(56, 189, 248, 0.15); }
+        .glass-card:hover { border-color: rgba(56, 189, 248, 0.5); box-shadow: 0 0 25px rgba(56, 189, 248, 0.15); }
+        
+        /* Animasi Melayang Halus untuk Foto Besar */
+        @keyframes gentleFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        .anim-float-photo { animation: gentleFloat 4s ease-in-out infinite; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 selection:bg-cyan-500 selection:text-slate-950 flex flex-col min-h-screen">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-nav border-b border-cyan-500/10">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-base md:text-xl font-extrabold tracking-tight text-white">MUHAMMAD<span class="text-cyan-400"> SANHAJI</span></a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="index.html#profil" class="text-slate-300 hover:text-cyan-400 transition">Profil</a>
+                <a href="index.html#desain" class="text-slate-300 hover:text-cyan-400 transition">Desain</a>
+                <a href="index.html#video" class="text-slate-300 hover:text-cyan-400 transition">Video</a>
+                <a href="index.html#seminar" class="text-slate-300 hover:text-cyan-400 transition">Seminar</a>
+                <a href="index.html#template" class="text-slate-300 hover:text-cyan-400 transition">E-course</a>
+                <a href="blog.html" class="text-cyan-400 font-semibold transition">Blog</a>
+            </div>
+                    <a href="index.html" class="bg-cyan-500/10 text-cyan-400 px-4 py-2 rounded-xl text-xs md:text-sm font-bold hover:bg-cyan-500/20 transition-all border border-cyan-500/20 flex items-center gap-2">
+                        <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Home
+                    </a>
+            </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center justify-center pt-28 pb-16 px-6 relative overflow-hidden">
+        <!-- Background Blur Glow -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] md:w-[500px] h-[350px] md:h-[500px] bg-cyan-500/10 rounded-full blur-[130px] pointer-events-none"></div>
+
+        <div class="max-w-md w-full mx-auto text-center relative z-10">
+            
+            <!-- FOTO UTAMA UKURAN BESAR DENGAN ANIMASI -->
+            <div class="anim-float-photo relative w-36 h-44 md:w-40 md:h-48 mx-auto mb-6">
+                <!-- Efek Glow di Belakang Foto -->
+                <div class="absolute -inset-1"></div>
+                <img src="Editing/blog.jpg" alt="Muhammad Sanhaji" class="relative w-full h-full object-cover object-top">
+            </div>
+
+            <!-- KETERANGAN UTAMA -->
+            <span class="text-cyan-400 font-semibold tracking-widest text-[10px] md:text-xs uppercase px-3 py-1 bg-cyan-500/10 rounded-full border border-cyan-500/20 inline-block mb-3">
+                Coming Soon
+            </span>
+            <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight text-white mb-3">
+                "Orangnya masih belajar nulis..." ✍️😊
+            </h2>
+
+            <!-- Tombol Kembali ke Beranda -->
+            <a href="index.html" class="inline-flex items-center justify-center gap-2 w-full bg-cyan-500 text-slate-950 py-3 px-6 rounded-xl text-xs md:text-sm font-bold hover:bg-cyan-400 transition shadow-lg shadow-cyan-500/20">
+                <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                <span>Kembali ke Beranda</span>
+            </a>
+
+        </div>
+    </main>
+
+    <footer id="kontak" class="bg-slate-950 text-white pt-20 pb-12 px-6 border-t border-slate-900 relative overflow-hidden">
+        <div class="absolute bottom-0 right-0 w-[300px] h-[300px] bg-cyan-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto">
+            <!-- Footer Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-slate-900">
+                <div class="col-span-1">
+                    <div class="flex items-center space-x-2 mb-3">
+                        <img src="Photo-profil.png" class="w-7 h-7 rounded-lg object-cover">
+                        <span class="text-base font-bold tracking-tight text-white">MUHAMMAD <span class="text-cyan-400">SANHAJI</span></span>
+                    </div>
+                    <p class="text-slate-400 text-xs leading-relaxed mb-5">
+                        Helping businesses build a strong visual identity through graphic design and creative education since 2021.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="https://www.facebook.com/share/1EXyHubKTA/" class="w-9 h-9 bg-blue-600 border border-slate-800 rounded-full flex items-center justify-center hover:border-cyan-400 hover:text-cyan-400 transition"><img src="Icon/Icon (1).png" class="w-4 h-4 object-contain"></a>     
+                        <a href="https://www.instagram.com/saann_471?igsh=MWxvcXR1cmExajk4cA==" class="w-9 h-9 bg-blue-600 border border-slate-800 rounded-full flex items-center justify-center hover:border-cyan-400 hover:text-cyan-400 transition"><img src="Icon/Icon (2).png" class="w-4 h-4 object-contain"></a>   
+                        <a href="https://www.tiktok.com/@sannxx47?_r=1&_t=ZS-96m0yATUSjV" class="w-9 h-9 bg-blue-600 border border-slate-800 rounded-full flex items-center justify-center hover:border-cyan-400 hover:text-cyan-400 transition"><img src="Icon/Icon (3).png" class="w-4 h-4 object-contain"></a>        
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="pt-6 flex flex-col md:flex-row justify-between items-center text-slate-500 text-xs gap-4">
+                <p>&copy; Designed & Crafted with ❤️<span class="text-white font-medium"> By San </span>2026.</p>
+                <div class="flex space-x-6">
+                    <a href="blog.html" class="hover:text-cyan-400 transition">Blog</a>
+                    <a href="privacy.html" class="hover:text-cyan-400 transition">Privacy Policy</a>
+                    <a href="tos.html" class="hover:text-cyan-400 transition">Terms of Service</a>
+                    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="flex items-center gap-1 hover:text-cyan-400 transition font-bold uppercase tracking-widest">
+                        Top <i data-lucide="chevron-up" class="w-3.5 h-3.5"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
